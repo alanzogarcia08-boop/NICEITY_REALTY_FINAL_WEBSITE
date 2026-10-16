@@ -426,6 +426,25 @@ th {
     color: #fff;
 }
 
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #f45b82;
+  color: #f45b82;            
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #f45b82;
+  color: #ffffff;
+}
+
 /* ===== Magazine style text ===== */
 .lead {
     font-size: 18px;
@@ -551,6 +570,28 @@ footer a, footer p {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffffff;    
+  border: 2px solid #f45b82;      
+  color: #f45b82;                
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.footer-social-icon:hover {
+  background-color: #f45b82;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .copyright {
