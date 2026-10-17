@@ -71,7 +71,6 @@ nav a {
     color: var(--pink);
     font-size: 14px;
     text-transform: uppercase;
-    transition: color 0.3s;
     transition: 0.3s;
 }
 
@@ -276,6 +275,10 @@ nav a:hover, nav a.active {
 }
 
 /* ===== Houses ===== */
+.unit {
+    scroll-margin-top: 90px;
+}
+
 .unit h3 {
     text-align: center;
     color: var(--dark-pink);
@@ -324,13 +327,13 @@ nav a:hover, nav a.active {
       rgba(175, 25, 95, 0.65), 
       rgba(120, 10, 60, 0.75)
     ), 
-    url("img/lower-banner.jpg") center 40% / cover no-repeat;
+    url("img/madonnaresidencesgate.jpeg") center 40% / cover no-repeat;
   text-align: center;
   color: #fff;
   padding: 80px 20px;
 }
 
-.bottom-banner h1 {
+.bottom-banner h2 {
     font-family: serif;
     font-weight: 100;
     font-size: 48px;
@@ -352,17 +355,6 @@ nav a:hover, nav a.active {
 }
 
 /* Styling for inputs and dropdowns */
-.form {
-    width: 100%;
-}
-
-.form label {
-    display: block;
-    font-size: 13px;
-    font-weight: 700;
-    margin-top: 12px;
-}
-
 /* Base style for text inputs */
 .form input {
     width: 100%;
@@ -710,8 +702,7 @@ footer a:hover {
         padding: 15px 20px;
     }
 
-    nav a
-        :hover, nav a.active {
+    nav a:hover, nav a.active {
         background: rgba(175, 25, 95, 0.65);
         color: #fff;
         padding-left: 30px;
@@ -763,9 +754,4 @@ footer a:hover {
         border-radius: 22px;
     }
 
-}
-
-
-.unit {
-    scroll-margin-top: 90px;
 }
