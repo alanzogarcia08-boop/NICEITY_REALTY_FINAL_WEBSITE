@@ -24,10 +24,12 @@ if (form) {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     const message = document.getElementById('message');
-    const fields = form.querySelectorAll('input');
+    
+    // Validation
+    const fields = form.querySelectorAll('input, select');
     let allFilled = true;
 
-    // Check that every field has a value
+    // Validates if it is empty or invalid
     fields.forEach(function (field) {
       if (field.value.trim() === '' || !field.checkValidity()) {
         field.classList.add('error');
@@ -42,13 +44,14 @@ if (form) {
       message.textContent = 'Please fill in all fields correctly.';
       return;
     }
-
-    // Open the visitor's email app with the request filled in
+    
     const body = 'Name: ' + form.name.value +
       '\nUnit: ' + form.unit.value +
-      '\nPreferred time and date: ' + form.datetime.value +
+      '\nPreferred Date: ' + form.date.value +
+      '\nPreferred Time: ' + form.time.value +
       '\nEmail: ' + form.email.value;
-    window.location.href = 'mailto:niceityrealty@gmail.com?subject=House Viewing Request&body=' + encodeURIComponent(body);
+      
+    window.location.href = 'mailto:alanzogarcia08@gmail.com?subject=House Viewing Request&body=' + encodeURIComponent(body);
 
     message.className = 'success';
     message.textContent = 'Thank you! Your viewing request has been submitted.';

@@ -316,6 +316,27 @@ nav a:hover, nav a.active {
     margin-bottom: 12px;
 }
 
+.bottom-banner {
+  background: 
+    linear-gradient(
+      rgba(175, 25, 95, 0.65), 
+      rgba(120, 10, 60, 0.75)
+    ), 
+    url("img/lower-banner.jpg") center 40% / cover no-repeat;
+  text-align: center;
+  color: #fff;
+  padding: 80px 20px;
+}
+
+.bottom-banner h1 {
+    font-family: serif;
+    font-weight: 100;
+    font-size: 48px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+
 /* ===== Contact ===== */
 .form {
     width: 100%;
