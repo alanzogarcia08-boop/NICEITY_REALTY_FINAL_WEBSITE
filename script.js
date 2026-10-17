@@ -18,7 +18,7 @@ document.querySelectorAll('nav a').forEach(function (link) {
   });
 });
 
-// ===== Booking form (Contact page) =====
+// ===== Booking form (Contact page) ========================
 var bookingForm = document.getElementById("bookingForm");
 
 if (bookingForm) {
@@ -59,7 +59,7 @@ if (bookingForm) {
       return;
     }
 
-    // Validates the date (today or later)
+    // Validates the date
     var chosenDate = new Date(document.getElementById("date").value + "T00:00:00");
     var today = new Date();
     today.setHours(0, 0, 0, 0);

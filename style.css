@@ -72,11 +72,13 @@ nav a {
     font-size: 14px;
     text-transform: uppercase;
     transition: color 0.3s;
+    transition: 0.3s;
 }
 
 nav a:hover, nav a.active {
     color: var(--dark-pink);
     font-weight: 700;
+    transform: scale(1.04);
 }
 
 /* Hamburger button (hidden on desktop) */
@@ -640,10 +642,12 @@ footer h3 {
 footer a, footer p {
     display: block;
     margin-bottom: 5px;
+    transition: 0.3s;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    transform: scale(1.04);
 }
 
 .footer-social-icon {
@@ -674,7 +678,7 @@ footer a:hover {
     font-weight: 600;
 }
 
-/* ===== Tablet and mobile: hamburger menu ===== */
+/* ===== Tablet and mobile: Hamburger Menu ===== */
 @media (max-width: 1023px) {
     .hamburger {
         display: block;
