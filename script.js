@@ -18,7 +18,6 @@ document.querySelectorAll('nav a').forEach(function (link) {
   });
 });
 
-
 // ===== Booking form (Contact page) =====
 var bookingForm = document.getElementById("bookingForm");
 
