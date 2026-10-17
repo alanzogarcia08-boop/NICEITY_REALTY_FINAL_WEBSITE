@@ -18,44 +18,61 @@ document.querySelectorAll('nav a').forEach(function (link) {
   });
 });
 
-// ===== Booking form (Contact page) =====
-const form = document.getElementById('bookingForm');
-if (form) {
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const message = document.getElementById('message');
-    
-    // Validation
-    const fields = form.querySelectorAll('input, select');
-    let allFilled = true;
 
-    // Validates if it is empty or invalid
-    fields.forEach(function (field) {
-      if (field.value.trim() === '' || !field.checkValidity()) {
-        field.classList.add('error');
+// ===== Booking form (Contact page) =====
+var bookingForm = document.getElementById("bookingForm");
+
+if (bookingForm) {
+
+  bookingForm.onsubmit = function (event) {
+
+    var message = document.getElementById("message");
+
+    var boxes = ["name", "unit", "date", "time", "email"];
+    var allFilled = true;
+
+    // Validates if it is empty
+    for (var i = 0; i < boxes.length; i++) {
+      var box = document.getElementById(boxes[i]);
+
+      if (box.value.trim() == "") {
+        box.classList.add("error");
         allFilled = false;
       } else {
-        field.classList.remove('error');
+        box.classList.remove("error");
       }
-    });
+    }
 
-    if (!allFilled) {
-      message.className = '';
-      message.textContent = 'Please fill in all fields correctly.';
+    if (allFilled == false) {
+      message.className = "";
+      message.innerHTML = "Please fill in all fields correctly.";
+      event.preventDefault();
       return;
     }
-    
-    const body = 'Name: ' + form.name.value +
-      '\nUnit: ' + form.unit.value +
-      '\nPreferred Date: ' + form.date.value +
-      '\nPreferred Time: ' + form.time.value +
-      '\nEmail: ' + form.email.value;
-      
-    window.location.href = 'mailto:alanzogarcia08@gmail.com?subject=House Viewing Request&body=' + encodeURIComponent(body);
 
-    message.className = 'success';
-    message.textContent = 'Thank you! Your viewing request has been submitted.';
-    form.reset();
-  });
+    // Validates the email
+    var email = document.getElementById("email").value;
+    if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+      message.className = "";
+      message.innerHTML = "Please enter a valid e-mail address.";
+      document.getElementById("email").classList.add("error");
+      event.preventDefault();
+      return;
+    }
+
+    // Validates the date (today or later)
+    var chosenDate = new Date(document.getElementById("date").value + "T00:00:00");
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    if (chosenDate < today) {
+      message.className = "";
+      message.innerHTML = "Please choose a date that is today or later.";
+      document.getElementById("date").classList.add("error");
+      event.preventDefault();
+      return;
+    }
+
+    message.className = "success";
+    message.innerHTML = "Sending your request...";
+  };
 }
-
