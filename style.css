@@ -486,8 +486,8 @@ th {
 }
 
 .socials a {
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
     border: 1.5px solid var(--border);
     border-radius: 50%;
     display: flex;
@@ -593,7 +593,7 @@ th {
     font-weight: 700;
 }
 
-/* Two cards side by side */
+/* Two divs side by side */
 .two-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -709,6 +709,14 @@ footer a:hover {
         display: block;
         padding: 15px 20px;
     }
+
+    nav a
+        :hover, nav a.active {
+        background: rgba(175, 25, 95, 0.65);
+        color: #fff;
+        padding-left: 30px;
+    }
+ 
 
 }
 
