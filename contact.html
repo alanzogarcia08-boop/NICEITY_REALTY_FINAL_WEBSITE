@@ -1,3 +1,9 @@
+
+  <!-- 
+   Real Estate Website For NiCeity Realty: Contact Page
+   Created by Alonzo Miguel R. Garcia
+  -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,28 +48,47 @@
     <h2 class="title">Book an Appointment Now!</h2>
     <p class="lead">Ready to see a home in person? Fill out the form and we will confirm your viewing schedule by email. You can also call or message us anytime.</p>
 
-    <div class="two-cols">
-      <div class="card">
-        <h2 class="title">Viewing Request</h2>
-        <form class="form" id="bookingForm" novalidate>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      <div class="two-cols">
+        <div class="card">
+          <h2 class="title">Viewing Request</h2>
+          <form class="form" id="bookingForm" novalidate>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
-          <label for="unit">Unit for Viewing</label>
-          <input type="text" id="unit" name="unit" placeholder="Enter unit" required>
+            <!-- Unit Selection Dropdown (Unit 1 to 4) -->
+            <label for="unit">Unit for Viewing</label>
+            <select id="unit" name="unit" required>
+              <option value="" disabled selected>Select a unit</option>
+              <option value="Unit 1">Unit 1</option>
+              <option value="Unit 2">Unit 2</option>
+              <option value="Unit 3">Unit 3</option>
+              <option value="Unit 4">Unit 4</option>
+            </select>
 
-          <label for="datetime">Preferred Time and Date</label>
-          <input type="text" id="datetime" name="datetime" placeholder="Select time and date" required>
+            <!-- Calendar Date Picker -->
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
 
-          <label for="email">Email for Confirmation of Schedule</label>
-          <input type="email" id="email" name="email" placeholder="niceityrealty@gmail.com" required>
+            <!--  Time Slot Dropdown -->
+            <label for="time">Preferred Time Slot</label>
+            <select id="time" name="time" required>
+              <option value="" disabled selected>Select a time slot</option>
+              <option value="09:00 AM">09:00 AM - 10:00 AM</option>
+              <option value="10:30 AM">10:30 AM - 11:30 AM</option>
+              <option value="01:30 PM">01:30 PM - 02:30 PM</option>
+              <option value="03:00 PM">03:00 PM - 04:00 PM</option>
+              <option value="04:30 PM">04:30 PM - 05:30 PM</option>
+            </select>
 
-          <p id="message" role="status"></p>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+            <label for="email">Email for Confirmation of Schedule</label>
+            <input type="email" id="email" name="email" placeholder="niceityrealty@gmail.com" required>
 
-      <div class="card contact-info">
+            <p id="message" role="status"></p>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+
+        <div class="card contact-info">
         <h2 class="title">Contact Information</h2>
         <p>Prefer to talk first? Call or message us during office hours and we will answer your questions about any of our units.</p>
         <br>
@@ -72,6 +97,7 @@
         <p><strong>Office :</strong> Dela Paz Sur, San Fernando, 2000 Pampanga</p>
         <br>
         <h3>Social Media</h3>
+        <br>
         <br>
         <div class="socials">
           <a href="https://www.facebook.com/NiCeity14" class="social-icon" target="_blank">
@@ -86,6 +112,8 @@
         </div>
       </div>
     </div>
+
+
 
     <h2 class="title">What Happens Next</h2>
     <div class="boxes">

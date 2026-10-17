@@ -51,31 +51,8 @@ if (form) {
     window.location.href = 'mailto:niceityrealty@gmail.com?subject=House Viewing Request&body=' + encodeURIComponent(body);
 
     message.className = 'success';
-    message.textContent = 'Thank you! Please send the email that just opened.';
+    message.textContent = 'Thank you! Your viewing request has been submitted.';
     form.reset();
   });
 }
 
-
-document.addEventListener("DOMContentLoaded", function() {
-  const wrapper = document.getElementById("tiktok-embed-wrapper");
-
-  if (!wrapper) return;
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-
-        const script = document.createElement("script");
-        script.src = "https://www.tiktok.com/embed.js";
-        script.async = true;
-        document.body.appendChild(script);
-
-        
-        observer.unobserve(wrapper);
-      }
-    });
-  }, { rootMargin: "300px 0px" }); 
-
-  observer.observe(wrapper);
-});

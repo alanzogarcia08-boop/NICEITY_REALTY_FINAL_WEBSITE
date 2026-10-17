@@ -112,10 +112,15 @@ nav a:hover, nav a.active {
 
 /* ===== Hero ===== */
 .hero {
-    background: url("img/hero.jpg") center / cover;
-    text-align: center;
-    color: #fff;
-    padding: 80px 20px;
+  background: 
+    linear-gradient(
+      rgba(175, 25, 95, 0.65), 
+      rgba(120, 10, 60, 0.75)
+    ), 
+    url("img/hero.jpg") center / cover;
+  text-align: center;
+  color: #fff;
+  padding: 80px 20px;
 }
 
 .hero h1 {
@@ -149,6 +154,7 @@ nav a:hover, nav a.active {
 .search:hover {
     background: var(--pink);
     color: #fff;
+    transform: scale(1.01);
 }
 
 /* ===== Layout ===== */
@@ -179,6 +185,11 @@ nav a:hover, nav a.active {
     margin-bottom: 30px;
     box-shadow: 0 4px 12px rgba(240, 82, 127, 0.25);
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+
+.card:hover {
+    transform: scale(1.02);
 }
 
 .btn {
@@ -317,20 +328,62 @@ nav a:hover, nav a.active {
     margin-top: 12px;
 }
 
+/* Styling for inputs and dropdowns */
+.form {
+    width: 100%;
+}
+
+.form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+/* Base style for text inputs */
 .form input {
     width: 100%;
     padding: 10px;
     border: 1px solid var(--border);
     border-radius: 8px;
     font-family: inherit;
+    font-size: 14px;
+    background-color: #fff;
+    box-sizing: border-box;
 }
 
-.form input:focus {
+
+.form select {
+    width: 100%;
+    padding: 10px 35px 10px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: #fff;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+.form input:focus,
+.form select:focus {
     outline: 2px solid var(--pink);
 }
 
-.form input.error {
+.form input.error,
+.form select.error {
     border-color: red;
+}
+
+.form select:invalid, 
+.form select option[value=""] {
+    color: #999;
 }
 
 .form button {
