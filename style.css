@@ -158,7 +158,7 @@ nav a:hover, nav a.active {
     transform: scale(1.01);
 }
 
-/* ===== Layout ===== */
+/* ===== Layout ====== */
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -176,6 +176,7 @@ nav a:hover, nav a.active {
     margin: 0 auto 30px;
     max-width: 600px;
 }
+
 
 /* Cards - one simple soft shadow */
 .card {
